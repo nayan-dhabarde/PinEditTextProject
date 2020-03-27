@@ -10,10 +10,9 @@ class PinTextWatcher(var nextView: EditText?, var onFinish: () -> Unit = {}): Te
         s?.let {
             if(s.isNotEmpty()) {
                 nextView?.requestFocus()
-            } else {
-                onFinish()
             }
         }
+        onFinish()
     }
 
     override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
